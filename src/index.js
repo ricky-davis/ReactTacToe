@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+var app = document.createElement("div");
+app.id="app";
+document.body.appendChild(app);
 
 function Square(props) {
     return (
@@ -47,7 +50,7 @@ class Board extends React.Component {
         }
 
         return (
-            <div>
+            <div className="GameHolder">
                 <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
